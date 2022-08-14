@@ -1,10 +1,12 @@
 type Link<T> = Option<Box<Node<T>>>;
 
+#[derive(Debug)]
 struct Node<T> {
   value: T,
   next: Link<T>,
 }
 
+#[derive(Default, Debug)]
 pub struct List<T> {
   head: Link<T>,
   size: usize,
